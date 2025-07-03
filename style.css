@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --main-color: #f76f8f;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 40px;
+}
+
+.bogo_container {
+  width: 400px;
+  gap: 10px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.bogo_list {
+  border: 1px solid rgb(171, 169, 169);
+  padding: 25px;
+  height: fit-content;
+  border-radius: 2px;
+  border-radius: 3px;
+}
+
+.bogo_list > .bogo_label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bogo_list > .bogo_label :first-child {
+  display: flex;
+  gap: 10px;
+}
+
+.bogo_off {
+  background-color: var(--main-color);
+  color: white;
+  padding: 2px 4px;
+}
+
+.bogo_heading {
+  margin-bottom: 10px;
+}
+
+.bogo_heading > span {
+  position: relative;
+  border: 1px solid rgb(199, 199, 199);
+  width: 100%;
+  display: block;
+  background-color: transparent;
+}
+
+.bogo_heading > span > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid rgb(251, 137, 156); */
+  padding: 2px;
+  box-shadow: 0px 0px 0px 4px white;
+  background-color: white;
+  color: var(--main-color);
+}
+
+.title_text {
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.bogo_info {
+  display: grid;
+  grid-template-columns: 15px 1fr 1fr;
+  gap: 10px;
+  width: 240px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.bogo_info_hide {
+  display: none;
+}
+
+.bogo_container_active {
+  border: 2px solid var(--main-color);
+  background-color: #f9f3f4;
+  position: relative;
+}
+
+.bogo_info .num_seq {
+  font-size: 10px;
+  color: rgb(137, 136, 136);
+}
+
+.bogo_info select {
+  background-color: white;
+  padding: 4px;
+}
+
+del {
+  font-size: 10px;
+}
+
+.bogo_label input[type="radio"] {
+  accent-color: palevioletred;
+}
+
+.calc_card_price {
+  font-size: 14px;
+}
+
+.calc_card_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc_card_price .free_tag {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.most_papular {
+  color: var(--main-color);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bogo_label_popup {
+  color: white;
+  font-size: 13px;
+  /* font-weight: bold; */
+  position: absolute;
+  right: -5px;
+  background-color: #f76f8f;
+  padding: 8px 20px;
+  top: -10px;
+}
+
+.add_cart_button {
+  background-color: #f76f8f;
+  border: none;
+  padding: 12px;
+  color: white;
+}
+
+@media (max-width: 450px) {
+  .bogo_container {
+    width: 320px;
+    gap: 5px;
+  }
+
+  .title_text {
+    font-size: 10px;
+  }
+
+  .most_papular {
+    font-size: 10px;
+  }
+
+  .bogo_label_popup {
+    font-size: 10px;
+  }
+  .bogo_list > .bogo_label {
+    font-size: 12px;
+  }
+}
